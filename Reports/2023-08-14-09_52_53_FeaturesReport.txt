@@ -1,0 +1,128 @@
+Summary:
+	Test execution start time       : 2023-08-14 09:52:53 UTC
+	Test execution end time         : 2023-08-14 09:52:53 UTC
+	Test execution time             : 63ms
+	Test execution time (aggregated): 277ms
+	Number of features              : 1
+	Number of scenarios             : 6
+	Passed scenarios                : 3
+	Bypassed scenarios              : 1
+	Failed scenarios                : 2
+	Ignored scenarios               : 0
+	Number of steps                 : 21
+	Passed steps                    : 18
+	Bypassed steps                  : 1
+	Failed steps                    : 2
+	Ignored steps                   : 0
+	Not Run steps                   : 0
+
+Feature: Contacts management [Relations:123]
+	In order to maintain my contact book
+	As an application user
+	I want to add, browse and remove my contacts
+
+	Scenario: Contact book should allow me to add multiple contacts [Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_add_multiple_contacts] - Passed (33ms)
+		Step 1: GIVEN my contact book is empty - Passed (6ms)
+		Step 2: WHEN I add new contacts - Passed (<1ms)
+		Step 3: THEN all contacts should be available in the contact book - Passed (6ms)
+
+	Scenario: Contact book should allow me to remove all contacts [Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_remove_all_contacts] - Bypassed (30ms)
+		Step 1: GIVEN my contact book is filled with many contacts - Passed (5ms)
+		Step 2: WHEN I clear it - Bypassed (1ms)
+		Step 3: THEN the contact book should be empty - Passed (<1ms)
+		Details:
+			Step 2: Contact book clearing is not implemented yet. Contacts are removed one by one.
+
+	Scenario: Contact book should allow me to remove contacts [Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_remove_contacts] - Passed (34ms)
+		Step 1: GIVEN my contact book is filled with contacts - Passed (6ms)
+		Step 2: WHEN I remove one contact - Passed (<1ms)
+		Step 3: THEN the contact book should not contain removed contact any more - Passed (5ms)
+		Step 4: AND the contact book should contains all other contacts - Passed (<1ms)
+
+	Scenario: Displaying contacts alphabetically [Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Displaying_contacts_alphabetically] - Passed (51ms)
+		Step 1: GIVEN my contact book is empty - Passed (5ms)
+		Step 2: AND I added contacts "<$contacts>" - Passed (<1ms)
+		contacts:
+		+-----------------+-----+------------+
+		|Email            |Name |PhoneNumber |
+		+-----------------+-----+------------+
+		|john123@gmail.com|John |111-222-333 |
+		|greg22@gmail.com |Greg |213-444-444 |
+		|emily1@gmail.com |Emily|111-222-5556|
+		|ka321@gmail.com  |Kathy|111-555-330 |
+		+-----------------+-----+------------+
+		Step 3: WHEN I request contacts sorted by name - Passed (<1ms)
+		Step 4: THEN I should receive contacts "<$contacts>" - Passed (19ms)
+		contacts:
+		+-+-----------------+-----+------------+
+		|#|Email            |Name |PhoneNumber |
+		+-+-----------------+-----+------------+
+		|=|emily1@gmail.com |Emily|111-222-5556|
+		|=|greg22@gmail.com |Greg |213-444-444 |
+		|=|john123@gmail.com|John |111-222-333 |
+		|=|ka321@gmail.com  |Kathy|111-555-330 |
+		+-+-----------------+-----+------------+
+
+	Scenario: Normalizing contact details [Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Normalizing_contact_details] - Failed (63ms)
+		Step 1: GIVEN I added contacts "<$contacts>" - Passed (11ms)
+		contacts:
+		+-------------------+-----+--------------+
+		|Email              |Name |PhoneNumber   |
+		+-------------------+-----+--------------+
+		|john253@mymail.com |John |00441123344555|
+		|jenny213@mymail.com|Jenny|112334455     |
+		|jerry123@mymail.com|Jerry|1123344556    |
+		|jos#@mymail.com    |Josh |12111333444   |
+		+-------------------+-----+--------------+
+		Step 2: WHEN I request contacts sorted by name - Passed (<1ms)
+		Step 3: THEN I should receive contacts "<$contacts>" - Failed (31ms)
+		contacts:
+		+-+-----+-------------------------------------------------+--------------------------------+
+		|#|Name |Email                                            |PhoneNumber                     |
+		+-+-----+-------------------------------------------------+--------------------------------+
+		|!|Jenny|jenny213@mymail.com                              |112334455/matches '[0-9]{10,14}'|
+		|=|Jerry|jerry123@mymail.com                              |1123344556                      |
+		|=|John |john253@mymail.com                               |00441123344555                  |
+		|!|Josh |jos#@mymail.com/matches '[a-z0-9.-]+@[a-z0-9.-]+'|12111333444                     |
+		+-+-----+-------------------------------------------------+--------------------------------+
+		Details:
+			Step 3: System.InvalidOperationException : Parameter 'contacts' verification failed: [0].PhoneNumber: expected: matches '[0-9]{10,14}', but got: '112334455'
+					[3].Email: expected: matches '[a-z0-9.-]+@[a-z0-9.-]+', but got: 'jos#@mymail.com'
+				at LightBDD.Core.Execution.Implementation.RunnableStep.VerifyParameterResults()
+				at LightBDD.Core.Execution.Implementation.RunnableStep.RunStepAsync()
+
+	Scenario: Searching for contacts by phone [Relations:234,235][Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Searching_for_contacts_by_phone][Test-label] - Failed (63ms)
+		Step 1: GIVEN my contact book is empty - Passed (6ms)
+		Step 2: AND I added contacts "<$contacts>" - Passed (<1ms)
+		contacts:
+		+-----------------+-----+------------+
+		|Email            |Name |PhoneNumber |
+		+-----------------+-----+------------+
+		|john123@gmail.com|John |111-222-333 |
+		|jo@hotmail.com   |John |111-303-404 |
+		|greg22@gmail.com |Greg |213-444-444 |
+		|emily1@gmail.com |Emily|111-222-5556|
+		|ka321@gmail.com  |Kathy|111-555-330 |
+		+-----------------+-----+------------+
+		Step 3: WHEN I search for contacts by phone starting with "111" - Passed (<1ms)
+		Step 4: THEN I should receive contacts "<$contacts>" - Failed (31ms)
+		contacts:
+		+-+-------------+----------------------------------+------------------+
+		|#|Name         |Email                             |PhoneNumber       |
+		+-+-------------+----------------------------------+------------------+
+		|=|Emily        |emily1@gmail.com                  |111-222-5556      |
+		|!|John         |john123@gmail.com/john@hotmail.com|111-222-333       |
+		|=|John         |jo@hotmail.com                    |111-303-404       |
+		|-|<none>/Kathie|<none>/ka321@gmail.com            |<none>/111-555-330|
+		|+|Kathy/<none> |ka321@gmail.com/<none>            |111-555-330/<none>|
+		+-+-------------+----------------------------------+------------------+
+		Details:
+			Step 4: System.InvalidOperationException : Parameter 'contacts' verification failed: [1].Email: expected: equals 'john@hotmail.com', but got: 'john123@gmail.com'
+					[3].Name: missing value
+					[3].Email: missing value
+					[3].PhoneNumber: missing value
+					[4].Name: unexpected value
+					[4].Email: unexpected value
+					[4].PhoneNumber: unexpected value
+				at LightBDD.Core.Execution.Implementation.RunnableStep.VerifyParameterResults()
+				at LightBDD.Core.Execution.Implementation.RunnableStep.RunStepAsync()

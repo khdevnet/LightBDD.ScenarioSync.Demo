@@ -1,0 +1,57 @@
+Summary:
+	Test execution start time       : 2023-08-14 09:54:45 UTC
+	Test execution end time         : 2023-08-14 09:54:45 UTC
+	Test execution time             : 70ms
+	Test execution time (aggregated): 70ms
+	Number of features              : 1
+	Number of scenarios             : 1
+	Passed scenarios                : 0
+	Bypassed scenarios              : 0
+	Failed scenarios                : 1
+	Ignored scenarios               : 0
+	Number of steps                 : 4
+	Passed steps                    : 3
+	Bypassed steps                  : 0
+	Failed steps                    : 1
+	Ignored steps                   : 0
+	Not Run steps                   : 0
+
+Feature: Contacts management [Relations:123]
+	In order to maintain my contact book
+	As an application user
+	I want to add, browse and remove my contacts
+
+	Scenario: Searching for contacts by phone [Relations:234,235][Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Searching_for_contacts_by_phone][Test-label] - Failed (70ms)
+		Step 1: GIVEN my contact book is empty - Passed (6ms)
+		Step 2: AND I added contacts "<$contacts>" - Passed (9ms)
+		contacts:
+		+----------------+-----+------------+
+		|Email           |Name |PhoneNumber |
+		+----------------+-----+------------+
+		|john@hotmail.com|John |111-222-333 |
+		|jo@hotmail.com  |John |111-303-404 |
+		|greg22@gmail.com|Greg |213-444-444 |
+		|emily1@gmail.com|Emily|111-222-5556|
+		|ka321@gmail.com |Kathy|111-555-330 |
+		+----------------+-----+------------+
+		Step 3: WHEN I search for contacts by phone starting with "111" - Passed (<1ms)
+		Step 4: THEN I should receive contacts "<$contacts>" - Failed (28ms)
+		contacts:
+		+-+-------------+----------------------+------------------+
+		|#|Name         |Email                 |PhoneNumber       |
+		+-+-------------+----------------------+------------------+
+		|=|Emily        |emily1@gmail.com      |111-222-5556      |
+		|=|John         |john@hotmail.com      |111-222-333       |
+		|=|John         |jo@hotmail.com        |111-303-404       |
+		|-|<none>/Kathie|<none>/ka321@gmail.com|<none>/111-555-330|
+		|+|Kathy/<none> |ka321@gmail.com/<none>|111-555-330/<none>|
+		+-+-------------+----------------------+------------------+
+		Details:
+			Step 4: System.InvalidOperationException : Parameter 'contacts' verification failed: [3].Name: missing value
+					[3].Email: missing value
+					[3].PhoneNumber: missing value
+					[4].Name: unexpected value
+					[4].Email: unexpected value
+					[4].PhoneNumber: unexpected value
+				at LightBDD.Core.Execution.Implementation.RunnableStep.VerifyParameterResults()
+				at LightBDD.Core.Execution.Implementation.RunnableStep.RunStepAsync()

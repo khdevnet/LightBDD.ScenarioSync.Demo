@@ -1,0 +1,89 @@
+Summary:
+	Test execution start time       : 2023-08-14 09:56:32 UTC
+	Test execution end time         : 2023-08-14 09:56:32 UTC
+	Test execution time             : 51ms
+	Test execution time (aggregated): 191ms
+	Number of features              : 1
+	Number of scenarios             : 5
+	Passed scenarios                : 4
+	Bypassed scenarios              : 1
+	Failed scenarios                : 0
+	Ignored scenarios               : 0
+	Number of steps                 : 18
+	Passed steps                    : 17
+	Bypassed steps                  : 1
+	Failed steps                    : 0
+	Ignored steps                   : 0
+	Not Run steps                   : 0
+
+Feature: Contacts management [Relations:123]
+	In order to maintain my contact book
+	As an application user
+	I want to add, browse and remove my contacts
+
+	Scenario: Contact book should allow me to add multiple contacts [Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_add_multiple_contacts] - Passed (30ms)
+		Step 1: GIVEN my contact book is empty - Passed (6ms)
+		Step 2: WHEN I add new contacts - Passed (<1ms)
+		Step 3: THEN all contacts should be available in the contact book - Passed (4ms)
+
+	Scenario: Contact book should allow me to remove all contacts [Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_remove_all_contacts] - Bypassed (28ms)
+		Step 1: GIVEN my contact book is filled with many contacts - Passed (6ms)
+		Step 2: WHEN I clear it - Bypassed (1ms)
+		Step 3: THEN the contact book should be empty - Passed (<1ms)
+		Details:
+			Step 2: Contact book clearing is not implemented yet. Contacts are removed one by one.
+
+	Scenario: Contact book should allow me to remove contacts [Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_remove_contacts] - Passed (31ms)
+		Step 1: GIVEN my contact book is filled with contacts - Passed (6ms)
+		Step 2: WHEN I remove one contact - Passed (<1ms)
+		Step 3: THEN the contact book should not contain removed contact any more - Passed (3ms)
+		Step 4: AND the contact book should contains all other contacts - Passed (<1ms)
+
+	Scenario: Displaying contacts alphabetically [Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Displaying_contacts_alphabetically] - Passed (49ms)
+		Step 1: GIVEN my contact book is empty - Passed (6ms)
+		Step 2: AND I added contacts "<$contacts>" - Passed (11ms)
+		contacts:
+		+-----------------+-----+------------+
+		|Email            |Name |PhoneNumber |
+		+-----------------+-----+------------+
+		|john123@gmail.com|John |111-222-333 |
+		|greg22@gmail.com |Greg |213-444-444 |
+		|emily1@gmail.com |Emily|111-222-5556|
+		|ka321@gmail.com  |Kathy|111-555-330 |
+		+-----------------+-----+------------+
+		Step 3: WHEN I request contacts sorted by name - Passed (<1ms)
+		Step 4: THEN I should receive contacts "<$contacts>" - Passed (8ms)
+		contacts:
+		+-+-----------------+-----+------------+
+		|#|Email            |Name |PhoneNumber |
+		+-+-----------------+-----+------------+
+		|=|emily1@gmail.com |Emily|111-222-5556|
+		|=|greg22@gmail.com |Greg |213-444-444 |
+		|=|john123@gmail.com|John |111-222-333 |
+		|=|ka321@gmail.com  |Kathy|111-555-330 |
+		+-+-----------------+-----+------------+
+
+	Scenario: Searching for contacts by phone [Relations:234,235][Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Searching_for_contacts_by_phone][Test-label] - Passed (51ms)
+		Step 1: GIVEN my contact book is empty - Passed (6ms)
+		Step 2: AND I added contacts "<$contacts>" - Passed (11ms)
+		contacts:
+		+----------------+-----+------------+
+		|Email           |Name |PhoneNumber |
+		+----------------+-----+------------+
+		|john@hotmail.com|John |111-222-333 |
+		|jo@hotmail.com  |John |111-303-404 |
+		|greg22@gmail.com|Greg |213-444-444 |
+		|emily1@gmail.com|Emily|111-222-5556|
+		|ka321@gmail.com |Kathy|111-555-330 |
+		+----------------+-----+------------+
+		Step 3: WHEN I search for contacts by phone starting with "111" - Passed (<1ms)
+		Step 4: THEN I should receive contacts "<$contacts>" - Passed (10ms)
+		contacts:
+		+-+-----+----------------+------------+
+		|#|Name |Email           |PhoneNumber |
+		+-+-----+----------------+------------+
+		|=|Emily|emily1@gmail.com|111-222-5556|
+		|=|John |john@hotmail.com|111-222-333 |
+		|=|John |jo@hotmail.com  |111-303-404 |
+		|=|Kathy|ka321@gmail.com |111-555-330 |
+		+-+-----+----------------+------------+

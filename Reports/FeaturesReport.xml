@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestResults>
+  <Summary TestExecutionStart="2023-08-14T09:56:32.7355199Z" TestExecutionEnd="2023-08-14T09:56:32.7866416Z" TestExecutionTime="PT0.0511217S">
+    <Features Count="1" />
+    <Scenarios Count="5" Passed="4" Bypassed="1" Failed="0" Ignored="0" />
+    <Steps Count="18" Passed="17" Bypassed="1" Failed="0" Ignored="0" NotRun="0" />
+  </Summary>
+  <Feature Name="Contacts management" RuntimeId="cfa209f4-8162-493d-9b61-7e9e71c4a2b1">
+    <Label Name="Relations:123" />
+    <Description>In order to maintain my contact book
+As an application user
+I want to add, browse and remove my contacts</Description>
+    <Scenario Status="Passed" Name="Contact book should allow me to add multiple contacts" ExecutionStart="2023-08-14T09:56:32.7355449Z" ExecutionTime="PT0.0307227S" RuntimeId="070f9881-0ca1-40cb-91c2-44e5e275e865">
+      <Name Format="Contact book should allow me to add multiple contacts" />
+      <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_add_multiple_contacts" />
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is empty" ExecutionStart="2023-08-14T09:56:32.7507475Z" ExecutionTime="PT0.0062425S" RuntimeId="d2b57c94-2c6a-4e8f-82ff-c3a2867581fb">
+        <StepName StepType="GIVEN" Format="my contact book is empty" />
+      </Step>
+      <Step Status="Passed" Number="2" Name="WHEN I add new contacts" ExecutionStart="2023-08-14T09:56:32.7618299Z" ExecutionTime="PT0.0000788S" RuntimeId="d729501e-3232-43c8-978b-4cf51a6f5555">
+        <StepName StepType="WHEN" Format="I add new contacts" />
+      </Step>
+      <Step Status="Passed" Number="3" Name="THEN all contacts should be available in the contact book" ExecutionStart="2023-08-14T09:56:32.7619277Z" ExecutionTime="PT0.0043S" RuntimeId="90167165-409d-4387-a1df-e8f35759df80">
+        <StepName StepType="THEN" Format="all contacts should be available in the contact book" />
+      </Step>
+    </Scenario>
+    <Scenario Status="Bypassed" Name="Contact book should allow me to remove all contacts" ExecutionStart="2023-08-14T09:56:32.7356577Z" ExecutionTime="PT0.0287696S" RuntimeId="09d58446-f9ff-41e2-8273-aa55781c4898">
+      <Name Format="Contact book should allow me to remove all contacts" />
+      <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_remove_all_contacts" />
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is filled with many contacts" ExecutionStart="2023-08-14T09:56:32.7507348Z" ExecutionTime="PT0.0062596S" RuntimeId="eaa65347-5432-4eb6-b875-cf383ac9c7dd">
+        <StepName StepType="GIVEN" Format="my contact book is filled with many contacts" />
+      </Step>
+      <Step Status="Bypassed" Number="2" Name="WHEN I clear it" ExecutionStart="2023-08-14T09:56:32.7618392Z" ExecutionTime="PT0.0013073S" RuntimeId="4282f19b-9b72-4422-8d4d-3228e3ca1b6e">
+        <StatusDetails>Step 2: Contact book clearing is not implemented yet. Contacts are removed one by one.</StatusDetails>
+        <StepName StepType="WHEN" Format="I clear it" />
+      </Step>
+      <Step Status="Passed" Number="3" Name="THEN the contact book should be empty" ExecutionStart="2023-08-14T09:56:32.7632275Z" ExecutionTime="PT0.0001746S" RuntimeId="089d1384-ff70-481e-a333-b0842187b6d8">
+        <StepName StepType="THEN" Format="the contact book should be empty" />
+      </Step>
+      <StatusDetails>Step 2: Contact book clearing is not implemented yet. Contacts are removed one by one.</StatusDetails>
+    </Scenario>
+    <Scenario Status="Passed" Name="Contact book should allow me to remove contacts" ExecutionStart="2023-08-14T09:56:32.7355199Z" ExecutionTime="PT0.0310043S" RuntimeId="7935d61a-9149-4447-ac19-410b9244624a">
+      <Name Format="Contact book should allow me to remove contacts" />
+      <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_remove_contacts" />
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is filled with contacts" ExecutionStart="2023-08-14T09:56:32.7507473Z" ExecutionTime="PT0.0062985S" RuntimeId="3304f9cd-6e3f-49a7-8dd5-76e3297475bd">
+        <StepName StepType="GIVEN" Format="my contact book is filled with contacts" />
+      </Step>
+      <Step Status="Passed" Number="2" Name="WHEN I remove one contact" ExecutionStart="2023-08-14T09:56:32.7618248Z" ExecutionTime="PT0.0002964S" RuntimeId="ec5c7888-9be0-41cd-a153-b581d2a549ad">
+        <StepName StepType="WHEN" Format="I remove one contact" />
+      </Step>
+      <Step Status="Passed" Number="3" Name="THEN the contact book should not contain removed contact any more" ExecutionStart="2023-08-14T09:56:32.7621516Z" ExecutionTime="PT0.0038433S" RuntimeId="aeabef0d-41a2-4daa-aad8-e0d972243714">
+        <StepName StepType="THEN" Format="the contact book should not contain removed contact any more" />
+      </Step>
+      <Step Status="Passed" Number="4" Name="AND the contact book should contains all other contacts" ExecutionStart="2023-08-14T09:56:32.766026Z" ExecutionTime="PT0.0004666S" RuntimeId="50fd428f-1daa-4ae3-bd09-28dbc9621550">
+        <StepName StepType="AND" Format="the contact book should contains all other contacts" />
+      </Step>
+    </Scenario>
+    <Scenario Status="Passed" Name="Displaying contacts alphabetically" ExecutionStart="2023-08-14T09:56:32.7355683Z" ExecutionTime="PT0.0496022S" RuntimeId="5d6a9022-bd43-40a1-b1f2-16f39e99da7f">
+      <Name Format="Displaying contacts alphabetically" />
+      <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Displaying_contacts_alphabetically" />
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is empty" ExecutionStart="2023-08-14T09:56:32.7507354Z" ExecutionTime="PT0.006275S" RuntimeId="b820e1aa-04f7-48fc-b8ec-b894250ba8db">
+        <StepName StepType="GIVEN" Format="my contact book is empty" />
+      </Step>
+      <Step Status="Passed" Number="2" Name="AND I added contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T09:56:32.7618206Z" ExecutionTime="PT0.0115749S" RuntimeId="a17423fb-3620-4569-9b4c-290f542890d8">
+        <StepName StepType="AND" Format="I added contacts &quot;{0}&quot;">
+          <Parameter IsEvaluated="true">&lt;$contacts&gt;</Parameter>
+        </StepName>
+        <Parameter Name="contacts">
+          <Table Status="NotApplicable">
+            <Column Index="0" Name="Email" IsKey="false" />
+            <Column Index="1" Name="Name" IsKey="false" />
+            <Column Index="2" Name="PhoneNumber" IsKey="false" />
+            <Row Status="NotApplicable" Type="Matching">
+              <Value Index="0" Status="NotApplicable" Value="john123@gmail.com" Expectation="john123@gmail.com" />
+              <Value Index="1" Status="NotApplicable" Value="John" Expectation="John" />
+              <Value Index="2" Status="NotApplicable" Value="111-222-333" Expectation="111-222-333" />
+            </Row>
+            <Row Status="NotApplicable" Type="Matching">
+              <Value Index="0" Status="NotApplicable" Value="greg22@gmail.com" Expectation="greg22@gmail.com" />
+              <Value Index="1" Status="NotApplicable" Value="Greg" Expectation="Greg" />
+              <Value Index="2" Status="NotApplicable" Value="213-444-444" Expectation="213-444-444" />
+            </Row>
+            <Row Status="NotApplicable" Type="Matching">
+              <Value Index="0" Status="NotApplicable" Value="emily1@gmail.com" Expectation="emily1@gmail.com" />
+              <Value Index="1" Status="NotApplicable" Value="Emily" Expectation="Emily" />
+              <Value Index="2" Status="NotApplicable" Value="111-222-5556" Expectation="111-222-5556" />
+            </Row>
+            <Row Status="NotApplicable" Type="Matching">
+              <Value Index="0" Status="NotApplicable" Value="ka321@gmail.com" Expectation="ka321@gmail.com" />
+              <Value Index="1" Status="NotApplicable" Value="Kathy" Expectation="Kathy" />
+              <Value Index="2" Status="NotApplicable" Value="111-555-330" Expectation="111-555-330" />
+            </Row>
+          </Table>
+        </Parameter>
+      </Step>
+      <Step Status="Passed" Number="3" Name="WHEN I request contacts sorted by name" ExecutionStart="2023-08-14T09:56:32.7762883Z" ExecutionTime="PT0.0003099S" RuntimeId="1ced375b-dc75-4217-ab14-89a3ee25a696">
+        <StepName StepType="WHEN" Format="I request contacts sorted by name" />
+      </Step>
+      <Step Status="Passed" Number="4" Name="THEN I should receive contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T09:56:32.7766225Z" ExecutionTime="PT0.0084727S" RuntimeId="27905fb4-9816-448d-8821-41f04bc02292">
+        <StepName StepType="THEN" Format="I should receive contacts &quot;{0}&quot;">
+          <Parameter IsEvaluated="true">&lt;$contacts&gt;</Parameter>
+        </StepName>
+        <Parameter Name="contacts">
+          <Table Status="Success">
+            <Column Index="0" Name="Email" IsKey="false" />
+            <Column Index="1" Name="Name" IsKey="false" />
+            <Column Index="2" Name="PhoneNumber" IsKey="false" />
+            <Row Status="Success" Type="Matching">
+              <Value Index="0" Status="Success" Value="emily1@gmail.com" Expectation="emily1@gmail.com" />
+              <Value Index="1" Status="Success" Value="Emily" Expectation="Emily" />
+              <Value Index="2" Status="Success" Value="111-222-5556" Expectation="111-222-5556" />
+            </Row>
+            <Row Status="Success" Type="Matching">
+              <Value Index="0" Status="Success" Value="greg22@gmail.com" Expectation="greg22@gmail.com" />
+              <Value Index="1" Status="Success" Value="Greg" Expectation="Greg" />
+              <Value Index="2" Status="Success" Value="213-444-444" Expectation="213-444-444" />
+            </Row>
+            <Row Status="Success" Type="Matching">
+              <Value Index="0" Status="Success" Value="john123@gmail.com" Expectation="john123@gmail.com" />
+              <Value Index="1" Status="Success" Value="John" Expectation="John" />
+              <Value Index="2" Status="Success" Value="111-222-333" Expectation="111-222-333" />
+            </Row>
+            <Row Status="Success" Type="Matching">
+              <Value Index="0" Status="Success" Value="ka321@gmail.com" Expectation="ka321@gmail.com" />
+              <Value Index="1" Status="Success" Value="Kathy" Expectation="Kathy" />
+              <Value Index="2" Status="Success" Value="111-555-330" Expectation="111-555-330" />
+            </Row>
+          </Table>
+        </Parameter>
+      </Step>
+    </Scenario>
+    <Scenario Status="Passed" Name="Searching for contacts by phone" ExecutionStart="2023-08-14T09:56:32.7355953Z" ExecutionTime="PT0.0510463S" RuntimeId="d9411849-545b-4037-ab97-3af43bfda44d">
+      <Name Format="Searching for contacts by phone" />
+      <Label Name="Relations:234,235" />
+      <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Searching_for_contacts_by_phone" />
+      <Label Name="Test-label" />
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is empty" ExecutionStart="2023-08-14T09:56:32.750924Z" ExecutionTime="PT0.0060693S" RuntimeId="b2637cab-22ab-4796-8652-919a15c6e348">
+        <StepName StepType="GIVEN" Format="my contact book is empty" />
+      </Step>
+      <Step Status="Passed" Number="2" Name="AND I added contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T09:56:32.7618074Z" ExecutionTime="PT0.0115578S" RuntimeId="3aa56170-a0db-4393-9a09-d24e23c2503d">
+        <StepName StepType="AND" Format="I added contacts &quot;{0}&quot;">
+          <Parameter IsEvaluated="true">&lt;$contacts&gt;</Parameter>
+        </StepName>
+        <Parameter Name="contacts">
+          <Table Status="NotApplicable">
+            <Column Index="0" Name="Email" IsKey="false" />
+            <Column Index="1" Name="Name" IsKey="false" />
+            <Column Index="2" Name="PhoneNumber" IsKey="false" />
+            <Row Status="NotApplicable" Type="Matching">
+              <Value Index="0" Status="NotApplicable" Value="john@hotmail.com" Expectation="john@hotmail.com" />
+              <Value Index="1" Status="NotApplicable" Value="John" Expectation="John" />
+              <Value Index="2" Status="NotApplicable" Value="111-222-333" Expectation="111-222-333" />
+            </Row>
+            <Row Status="NotApplicable" Type="Matching">
+              <Value Index="0" Status="NotApplicable" Value="jo@hotmail.com" Expectation="jo@hotmail.com" />
+              <Value Index="1" Status="NotApplicable" Value="John" Expectation="John" />
+              <Value Index="2" Status="NotApplicable" Value="111-303-404" Expectation="111-303-404" />
+            </Row>
+            <Row Status="NotApplicable" Type="Matching">
+              <Value Index="0" Status="NotApplicable" Value="greg22@gmail.com" Expectation="greg22@gmail.com" />
+              <Value Index="1" Status="NotApplicable" Value="Greg" Expectation="Greg" />
+              <Value Index="2" Status="NotApplicable" Value="213-444-444" Expectation="213-444-444" />
+            </Row>
+            <Row Status="NotApplicable" Type="Matching">
+              <Value Index="0" Status="NotApplicable" Value="emily1@gmail.com" Expectation="emily1@gmail.com" />
+              <Value Index="1" Status="NotApplicable" Value="Emily" Expectation="Emily" />
+              <Value Index="2" Status="NotApplicable" Value="111-222-5556" Expectation="111-222-5556" />
+            </Row>
+            <Row Status="NotApplicable" Type="Matching">
+              <Value Index="0" Status="NotApplicable" Value="ka321@gmail.com" Expectation="ka321@gmail.com" />
+              <Value Index="1" Status="NotApplicable" Value="Kathy" Expectation="Kathy" />
+              <Value Index="2" Status="NotApplicable" Value="111-555-330" Expectation="111-555-330" />
+            </Row>
+          </Table>
+        </Parameter>
+      </Step>
+      <Step Status="Passed" Number="3" Name="WHEN I search for contacts by phone starting with &quot;111&quot;" ExecutionStart="2023-08-14T09:56:32.7762901Z" ExecutionTime="PT0.0002392S" RuntimeId="a724e8a8-7445-4e14-9db8-44798ab89825">
+        <StepName StepType="WHEN" Format="I search for contacts by phone starting with &quot;{0}&quot;">
+          <Parameter IsEvaluated="true">111</Parameter>
+        </StepName>
+      </Step>
+      <Step Status="Passed" Number="4" Name="THEN I should receive contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T09:56:32.7765533Z" ExecutionTime="PT0.0100442S" RuntimeId="a5b8beff-c1dc-4c37-b867-0c5d4b5f141a">
+        <StepName StepType="THEN" Format="I should receive contacts &quot;{0}&quot;">
+          <Parameter IsEvaluated="true">&lt;$contacts&gt;</Parameter>
+        </StepName>
+        <Parameter Name="contacts">
+          <Table Status="Success">
+            <Column Index="0" Name="Name" IsKey="true" />
+            <Column Index="1" Name="Email" IsKey="false" />
+            <Column Index="2" Name="PhoneNumber" IsKey="false" />
+            <Row Status="Success" Type="Matching">
+              <Value Index="0" Status="Success" Value="Emily" Expectation="Emily" />
+              <Value Index="1" Status="Success" Value="emily1@gmail.com" Expectation="emily1@gmail.com" />
+              <Value Index="2" Status="Success" Value="111-222-5556" Expectation="111-222-5556" />
+            </Row>
+            <Row Status="Success" Type="Matching">
+              <Value Index="0" Status="Success" Value="John" Expectation="John" />
+              <Value Index="1" Status="Success" Value="john@hotmail.com" Expectation="john@hotmail.com" />
+              <Value Index="2" Status="Success" Value="111-222-333" Expectation="111-222-333" />
+            </Row>
+            <Row Status="Success" Type="Matching">
+              <Value Index="0" Status="Success" Value="John" Expectation="John" />
+              <Value Index="1" Status="Success" Value="jo@hotmail.com" Expectation="jo@hotmail.com" />
+              <Value Index="2" Status="Success" Value="111-303-404" Expectation="111-303-404" />
+            </Row>
+            <Row Status="Success" Type="Matching">
+              <Value Index="0" Status="Success" Value="Kathy" Expectation="Kathy" />
+              <Value Index="1" Status="Success" Value="ka321@gmail.com" Expectation="ka321@gmail.com" />
+              <Value Index="2" Status="Success" Value="111-555-330" Expectation="111-555-330" />
+            </Row>
+          </Table>
+        </Parameter>
+      </Step>
+    </Scenario>
+  </Feature>
+</TestResults>
