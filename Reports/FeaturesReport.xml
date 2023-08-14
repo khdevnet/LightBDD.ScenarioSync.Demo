@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TestResults>
-  <Summary TestExecutionStart="2023-08-14T09:56:32.7355199Z" TestExecutionEnd="2023-08-14T09:56:32.7866416Z" TestExecutionTime="PT0.0511217S">
+  <Summary TestExecutionStart="2023-08-14T10:17:16.3088313Z" TestExecutionEnd="2023-08-14T10:17:16.3642658Z" TestExecutionTime="PT0.0554345S">
     <Features Count="1" />
     <Scenarios Count="5" Passed="4" Bypassed="1" Failed="0" Ignored="0" />
     <Steps Count="18" Passed="17" Bypassed="1" Failed="0" Ignored="0" NotRun="0" />
   </Summary>
-  <Feature Name="Contacts management" RuntimeId="cfa209f4-8162-493d-9b61-7e9e71c4a2b1">
+  <Feature Name="Contacts management" RuntimeId="aa534246-50df-4415-b29b-4864b07e2729">
     <Label Name="Relations:123" />
     <Description>In order to maintain my contact book
 As an application user
 I want to add, browse and remove my contacts</Description>
-    <Scenario Status="Passed" Name="Contact book should allow me to add multiple contacts" ExecutionStart="2023-08-14T09:56:32.7355449Z" ExecutionTime="PT0.0307227S" RuntimeId="070f9881-0ca1-40cb-91c2-44e5e275e865">
+    <Scenario Status="Passed" Name="Contact book should allow me to add multiple contacts" ExecutionStart="2023-08-14T10:17:16.3088313Z" ExecutionTime="PT0.0364486S" RuntimeId="0ae81aa5-aeda-4748-a1ce-fc580e42e652">
       <Name Format="Contact book should allow me to add multiple contacts" />
       <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_add_multiple_contacts" />
-      <Step Status="Passed" Number="1" Name="GIVEN my contact book is empty" ExecutionStart="2023-08-14T09:56:32.7507475Z" ExecutionTime="PT0.0062425S" RuntimeId="d2b57c94-2c6a-4e8f-82ff-c3a2867581fb">
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is empty" ExecutionStart="2023-08-14T10:17:16.339222Z" ExecutionTime="PT0.0001288S" RuntimeId="8a8f884c-bb12-498a-90aa-831674b11617">
         <StepName StepType="GIVEN" Format="my contact book is empty" />
       </Step>
-      <Step Status="Passed" Number="2" Name="WHEN I add new contacts" ExecutionStart="2023-08-14T09:56:32.7618299Z" ExecutionTime="PT0.0000788S" RuntimeId="d729501e-3232-43c8-978b-4cf51a6f5555">
+      <Step Status="Passed" Number="2" Name="WHEN I add new contacts" ExecutionStart="2023-08-14T10:17:16.3394783Z" ExecutionTime="PT0.0003869S" RuntimeId="6530d668-c222-4d31-95df-45741050a029">
         <StepName StepType="WHEN" Format="I add new contacts" />
       </Step>
-      <Step Status="Passed" Number="3" Name="THEN all contacts should be available in the contact book" ExecutionStart="2023-08-14T09:56:32.7619277Z" ExecutionTime="PT0.0043S" RuntimeId="90167165-409d-4387-a1df-e8f35759df80">
+      <Step Status="Passed" Number="3" Name="THEN all contacts should be available in the contact book" ExecutionStart="2023-08-14T10:17:16.3400356Z" ExecutionTime="PT0.0049145S" RuntimeId="9f50b71b-7544-4967-9d0b-d6cb1952d0f1">
         <StepName StepType="THEN" Format="all contacts should be available in the contact book" />
       </Step>
     </Scenario>
-    <Scenario Status="Bypassed" Name="Contact book should allow me to remove all contacts" ExecutionStart="2023-08-14T09:56:32.7356577Z" ExecutionTime="PT0.0287696S" RuntimeId="09d58446-f9ff-41e2-8273-aa55781c4898">
+    <Scenario Status="Bypassed" Name="Contact book should allow me to remove all contacts" ExecutionStart="2023-08-14T10:17:16.3088328Z" ExecutionTime="PT0.0308998S" RuntimeId="b800edc2-caeb-40f9-bd7f-dfbf088a08b1">
       <Name Format="Contact book should allow me to remove all contacts" />
       <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_remove_all_contacts" />
-      <Step Status="Passed" Number="1" Name="GIVEN my contact book is filled with many contacts" ExecutionStart="2023-08-14T09:56:32.7507348Z" ExecutionTime="PT0.0062596S" RuntimeId="eaa65347-5432-4eb6-b875-cf383ac9c7dd">
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is filled with many contacts" ExecutionStart="2023-08-14T10:17:16.3259348Z" ExecutionTime="PT0.0056348S" RuntimeId="1e6ac148-ab46-4012-a107-aefa6b060f7b">
         <StepName StepType="GIVEN" Format="my contact book is filled with many contacts" />
       </Step>
-      <Step Status="Bypassed" Number="2" Name="WHEN I clear it" ExecutionStart="2023-08-14T09:56:32.7618392Z" ExecutionTime="PT0.0013073S" RuntimeId="4282f19b-9b72-4422-8d4d-3228e3ca1b6e">
+      <Step Status="Bypassed" Number="2" Name="WHEN I clear it" ExecutionStart="2023-08-14T10:17:16.336309Z" ExecutionTime="PT0.0013057S" RuntimeId="7aa7059d-1bf8-4eb4-b452-7378880239a3">
         <StatusDetails>Step 2: Contact book clearing is not implemented yet. Contacts are removed one by one.</StatusDetails>
         <StepName StepType="WHEN" Format="I clear it" />
       </Step>
-      <Step Status="Passed" Number="3" Name="THEN the contact book should be empty" ExecutionStart="2023-08-14T09:56:32.7632275Z" ExecutionTime="PT0.0001746S" RuntimeId="089d1384-ff70-481e-a333-b0842187b6d8">
+      <Step Status="Passed" Number="3" Name="THEN the contact book should be empty" ExecutionStart="2023-08-14T10:17:16.3378377Z" ExecutionTime="PT0.0003591S" RuntimeId="076e0fcc-ded3-4a8d-8344-2a1777b16bad">
         <StepName StepType="THEN" Format="the contact book should be empty" />
       </Step>
       <StatusDetails>Step 2: Contact book clearing is not implemented yet. Contacts are removed one by one.</StatusDetails>
     </Scenario>
-    <Scenario Status="Passed" Name="Contact book should allow me to remove contacts" ExecutionStart="2023-08-14T09:56:32.7355199Z" ExecutionTime="PT0.0310043S" RuntimeId="7935d61a-9149-4447-ac19-410b9244624a">
+    <Scenario Status="Passed" Name="Contact book should allow me to remove contacts" ExecutionStart="2023-08-14T10:17:16.3088595Z" ExecutionTime="PT0.0369464S" RuntimeId="10cfd445-f273-43cc-8324-eb9331692df6">
       <Name Format="Contact book should allow me to remove contacts" />
       <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Contact_book_should_allow_me_to_remove_contacts" />
-      <Step Status="Passed" Number="1" Name="GIVEN my contact book is filled with contacts" ExecutionStart="2023-08-14T09:56:32.7507473Z" ExecutionTime="PT0.0062985S" RuntimeId="3304f9cd-6e3f-49a7-8dd5-76e3297475bd">
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is filled with contacts" ExecutionStart="2023-08-14T10:17:16.3396728Z" ExecutionTime="PT0.0001973S" RuntimeId="e74ed0fe-dd3f-4a23-badc-6116a178617c">
         <StepName StepType="GIVEN" Format="my contact book is filled with contacts" />
       </Step>
-      <Step Status="Passed" Number="2" Name="WHEN I remove one contact" ExecutionStart="2023-08-14T09:56:32.7618248Z" ExecutionTime="PT0.0002964S" RuntimeId="ec5c7888-9be0-41cd-a153-b581d2a549ad">
+      <Step Status="Passed" Number="2" Name="WHEN I remove one contact" ExecutionStart="2023-08-14T10:17:16.3401736Z" ExecutionTime="PT0.000289S" RuntimeId="774ed185-7345-4754-a198-89fcfd741af9">
         <StepName StepType="WHEN" Format="I remove one contact" />
       </Step>
-      <Step Status="Passed" Number="3" Name="THEN the contact book should not contain removed contact any more" ExecutionStart="2023-08-14T09:56:32.7621516Z" ExecutionTime="PT0.0038433S" RuntimeId="aeabef0d-41a2-4daa-aad8-e0d972243714">
+      <Step Status="Passed" Number="3" Name="THEN the contact book should not contain removed contact any more" ExecutionStart="2023-08-14T10:17:16.340543Z" ExecutionTime="PT0.0042385S" RuntimeId="59f298d0-2f7d-4b1c-9123-49af7babba74">
         <StepName StepType="THEN" Format="the contact book should not contain removed contact any more" />
       </Step>
-      <Step Status="Passed" Number="4" Name="AND the contact book should contains all other contacts" ExecutionStart="2023-08-14T09:56:32.766026Z" ExecutionTime="PT0.0004666S" RuntimeId="50fd428f-1daa-4ae3-bd09-28dbc9621550">
+      <Step Status="Passed" Number="4" Name="AND the contact book should contains all other contacts" ExecutionStart="2023-08-14T10:17:16.3449277Z" ExecutionTime="PT0.0007482S" RuntimeId="a9286b35-2ef2-4b2e-b026-5b880b928ea6">
         <StepName StepType="AND" Format="the contact book should contains all other contacts" />
       </Step>
     </Scenario>
-    <Scenario Status="Passed" Name="Displaying contacts alphabetically" ExecutionStart="2023-08-14T09:56:32.7355683Z" ExecutionTime="PT0.0496022S" RuntimeId="5d6a9022-bd43-40a1-b1f2-16f39e99da7f">
+    <Scenario Status="Passed" Name="Displaying contacts alphabetically" ExecutionStart="2023-08-14T10:17:16.3088446Z" ExecutionTime="PT0.0538051S" RuntimeId="1737e811-381b-420a-9cda-d180e5198ec4">
       <Name Format="Displaying contacts alphabetically" />
       <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Displaying_contacts_alphabetically" />
-      <Step Status="Passed" Number="1" Name="GIVEN my contact book is empty" ExecutionStart="2023-08-14T09:56:32.7507354Z" ExecutionTime="PT0.006275S" RuntimeId="b820e1aa-04f7-48fc-b8ec-b894250ba8db">
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is empty" ExecutionStart="2023-08-14T10:17:16.3262176Z" ExecutionTime="PT0.005349S" RuntimeId="6066c076-788a-4330-bd6e-ba5308a793b3">
         <StepName StepType="GIVEN" Format="my contact book is empty" />
       </Step>
-      <Step Status="Passed" Number="2" Name="AND I added contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T09:56:32.7618206Z" ExecutionTime="PT0.0115749S" RuntimeId="a17423fb-3620-4569-9b4c-290f542890d8">
+      <Step Status="Passed" Number="2" Name="AND I added contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T10:17:16.3362764Z" ExecutionTime="PT0.0131953S" RuntimeId="e1b640b3-c579-416d-968c-354a4dc184a4">
         <StepName StepType="AND" Format="I added contacts &quot;{0}&quot;">
           <Parameter IsEvaluated="true">&lt;$contacts&gt;</Parameter>
         </StepName>
@@ -92,10 +92,10 @@ I want to add, browse and remove my contacts</Description>
           </Table>
         </Parameter>
       </Step>
-      <Step Status="Passed" Number="3" Name="WHEN I request contacts sorted by name" ExecutionStart="2023-08-14T09:56:32.7762883Z" ExecutionTime="PT0.0003099S" RuntimeId="1ced375b-dc75-4217-ab14-89a3ee25a696">
+      <Step Status="Passed" Number="3" Name="WHEN I request contacts sorted by name" ExecutionStart="2023-08-14T10:17:16.3523557Z" ExecutionTime="PT0.0005985S" RuntimeId="c9add134-0f15-4eaa-a9f2-e0ea9bcc15cd">
         <StepName StepType="WHEN" Format="I request contacts sorted by name" />
       </Step>
-      <Step Status="Passed" Number="4" Name="THEN I should receive contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T09:56:32.7766225Z" ExecutionTime="PT0.0084727S" RuntimeId="27905fb4-9816-448d-8821-41f04bc02292">
+      <Step Status="Passed" Number="4" Name="THEN I should receive contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T10:17:16.353138Z" ExecutionTime="PT0.0090178S" RuntimeId="7869838f-d110-4284-9613-837243bccc30">
         <StepName StepType="THEN" Format="I should receive contacts &quot;{0}&quot;">
           <Parameter IsEvaluated="true">&lt;$contacts&gt;</Parameter>
         </StepName>
@@ -128,15 +128,15 @@ I want to add, browse and remove my contacts</Description>
         </Parameter>
       </Step>
     </Scenario>
-    <Scenario Status="Passed" Name="Searching for contacts by phone" ExecutionStart="2023-08-14T09:56:32.7355953Z" ExecutionTime="PT0.0510463S" RuntimeId="d9411849-545b-4037-ab97-3af43bfda44d">
+    <Scenario Status="Passed" Name="Searching for contacts by phone" ExecutionStart="2023-08-14T10:17:16.3088487Z" ExecutionTime="PT0.0554171S" RuntimeId="2aecc769-2734-4716-9c2c-0d8b32b002eb">
       <Name Format="Searching for contacts by phone" />
       <Label Name="Relations:234,235" />
       <Label Name="Sync:Demo.LightBDD.XUnit2.dll;Demo.LightBDD.XUnit2.Features.Contacts_management.Searching_for_contacts_by_phone" />
       <Label Name="Test-label" />
-      <Step Status="Passed" Number="1" Name="GIVEN my contact book is empty" ExecutionStart="2023-08-14T09:56:32.750924Z" ExecutionTime="PT0.0060693S" RuntimeId="b2637cab-22ab-4796-8652-919a15c6e348">
+      <Step Status="Passed" Number="1" Name="GIVEN my contact book is empty" ExecutionStart="2023-08-14T10:17:16.3265073Z" ExecutionTime="PT0.0051079S" RuntimeId="5990a87c-3c87-497a-b756-16df08a76b43">
         <StepName StepType="GIVEN" Format="my contact book is empty" />
       </Step>
-      <Step Status="Passed" Number="2" Name="AND I added contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T09:56:32.7618074Z" ExecutionTime="PT0.0115578S" RuntimeId="3aa56170-a0db-4393-9a09-d24e23c2503d">
+      <Step Status="Passed" Number="2" Name="AND I added contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T10:17:16.3363511Z" ExecutionTime="PT0.0131284S" RuntimeId="17216a7d-d524-44b3-afac-6f33e1a0c222">
         <StepName StepType="AND" Format="I added contacts &quot;{0}&quot;">
           <Parameter IsEvaluated="true">&lt;$contacts&gt;</Parameter>
         </StepName>
@@ -173,12 +173,12 @@ I want to add, browse and remove my contacts</Description>
           </Table>
         </Parameter>
       </Step>
-      <Step Status="Passed" Number="3" Name="WHEN I search for contacts by phone starting with &quot;111&quot;" ExecutionStart="2023-08-14T09:56:32.7762901Z" ExecutionTime="PT0.0002392S" RuntimeId="a724e8a8-7445-4e14-9db8-44798ab89825">
+      <Step Status="Passed" Number="3" Name="WHEN I search for contacts by phone starting with &quot;111&quot;" ExecutionStart="2023-08-14T10:17:16.3525374Z" ExecutionTime="PT0.0004281S" RuntimeId="d678f393-55fc-46cc-9ee5-40f27cef8d8f">
         <StepName StepType="WHEN" Format="I search for contacts by phone starting with &quot;{0}&quot;">
           <Parameter IsEvaluated="true">111</Parameter>
         </StepName>
       </Step>
-      <Step Status="Passed" Number="4" Name="THEN I should receive contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T09:56:32.7765533Z" ExecutionTime="PT0.0100442S" RuntimeId="a5b8beff-c1dc-4c37-b867-0c5d4b5f141a">
+      <Step Status="Passed" Number="4" Name="THEN I should receive contacts &quot;&lt;$contacts&gt;&quot;" ExecutionStart="2023-08-14T10:17:16.3532932Z" ExecutionTime="PT0.0106078S" RuntimeId="7ac08c9c-68f2-4a0f-bbf2-1ab9fd2ddbec">
         <StepName StepType="THEN" Format="I should receive contacts &quot;{0}&quot;">
           <Parameter IsEvaluated="true">&lt;$contacts&gt;</Parameter>
         </StepName>
